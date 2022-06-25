@@ -27,8 +27,8 @@ class Gtw:
 
     def translate_words(self):
         text_word = "\n".join(self.words)
-        return self.translator.translate(text_word, dest='ru').text
+        return self.translator.translate(text_word, dest='ru').text.split('\n')
 
 
 gtw = Gtw(content_words_list)
-print(gtw.translate_words())
+print(gtw.translate_text())
